@@ -1,5 +1,5 @@
 .header {
-	padding: 15px 20px;
+	padding: 10px 20px;
 	display: flex;
 	justify-content: space-between;
 	position: sticky;
@@ -43,11 +43,12 @@
 	align-items: center;
 	padding: 0 30px;
 	cursor: pointer;
+	border: 3px solid transparent;
 }
 
 .header__option:hover {
 	background-color: #f3f1f1;
-	border-bottom: none;
+	border: 3px solid transparent;
 	border-radius: 10px;
 }
 
@@ -60,7 +61,7 @@
 }
 
 .header__option--active {
-	border-bottom: 4px solid blue;
+	border-bottom: 3px solid blue;
 }
 .header__option--active > .MuiSvgIcon-root {
 	color: blue;
@@ -77,4 +78,5 @@
 
 .header__info > h4 {
 	margin-left: 10px;
+	overflow: hidden;
 }

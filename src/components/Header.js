@@ -2,7 +2,7 @@ import "./Header.css";
 
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
-import FlagIcon from "@mui/icons-material/Flag";
+import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
 import SubscriptionsOutlinedIcon from "@mui/icons-material/SubscriptionsOutlined";
 import StoreOutlinedIcon from "@mui/icons-material/StoreOutlined";
 import VideogameAssetOutlinedIcon from "@mui/icons-material/VideogameAssetOutlined";
@@ -19,7 +19,7 @@ function Header() {
 				<img src="/img/fb_logo.png" alt="fb logo" />
 				<div className="header__input">
 					<SearchIcon />
-					<input type="text"  placeholder="Search Facebook"/>
+					<input type="text" placeholder="Search Facebook" />
 				</div>
 			</div>
 			<div className="header__center">
@@ -27,7 +27,7 @@ function Header() {
 					<HomeIcon fontSize="large" />
 				</div>
 				<div className="header__option">
-					<FlagIcon fontSize="large" />
+					<PeopleAltOutlinedIcon fontSize="large" />
 				</div>
 				<div className="header__option">
 					<SubscriptionsOutlinedIcon fontSize="large" />
