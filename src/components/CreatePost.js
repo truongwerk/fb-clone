@@ -1,12 +1,19 @@
+import { useState } from "react";
 import { Avatar } from "@mui/material";
-import "./CreatePost.css";
+import "../styles/CreatePost.css";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import PhotoLibraryIcon from "@mui/icons-material/PhotoLibrary";
 import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
 
 function CreatePost() {
+	const [input, setInput] = useState("");
+	const [imageURL, setImageURL] = useState("");
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		//data stuff
+		setInput("");
+		setImageURL("");
 	};
 
 	return (
@@ -15,10 +22,16 @@ function CreatePost() {
 				<Avatar />
 				<form action="">
 					<input
+						value={input}
+						onChange={(e) => setInput(e.target.value)}
 						className="createPost__input"
 						placeholder={`What's on your mind?`}
 					/>
-					<input placeholder="image URL (optional)" />
+					<input
+						value={imageURL}
+						onChange={(e) => setImageURL(e.target.value)}
+						placeholder="image URL (optional)"
+					/>
 					<button type="submit" onClick={handleSubmit}>
 						Hidden
 					</button>

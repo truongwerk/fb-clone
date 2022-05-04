@@ -1,5 +1,5 @@
 import Story from "./Story";
-import "./StoryReel.css";
+import "../styles/StoryReel.css";
 
 function StoryReel() {
 	return (

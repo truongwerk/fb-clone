@@ -27,6 +27,35 @@
 	background-color: #eff2f5;
 	border-radius: 999px;
 }
+
 .createPost__top > form > button {
 	display: none;
+}
+
+.createPost__input {
+	flex: 1;
+}
+
+.createPost__bottom {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.createPost__option {
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	color: gray;
+	margin: 5px;
+	cursor: pointer;
+}
+
+.createPost__option > h3 {
+	font-size: medium;
+	margin-left: 10px;
+}
+
+.createPost__option:hover {
+	background-color: #eff2f5;
+	border-radius: 20px;
 }

@@ -1,10 +1,11 @@
-import "./Sidebar.css";
+import "../styles/Sidebar.css";
 import SidebarRow from "./SidebarRow";
 import PeopleIcon from "@mui/icons-material/People";
-import GroupsIcon from '@mui/icons-material/Groups';
-import StoreIcon from '@mui/icons-material/Store';
-import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import GroupsIcon from "@mui/icons-material/Groups";
+import StoreIcon from "@mui/icons-material/Store";
+import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 function Sidebar() {
 	return (
@@ -18,6 +19,7 @@ function Sidebar() {
 			<SidebarRow Icon={StoreIcon} title="Marketplace" />
 			<SidebarRow Icon={SubscriptionsIcon} title="Watch" />
 			<SidebarRow Icon={AccessTimeIcon} title="Memories" />
+			<SidebarRow Icon={ExpandMoreIcon} title="More" />
 		</div>
 	);
 }

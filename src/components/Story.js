@@ -1,5 +1,5 @@
 import Avatar from "@mui/material/Avatar";
-import "./Story.css";
+import "../styles/Story.css";
 
 function Story({ image, profileSrc, title }) {
 	return (
