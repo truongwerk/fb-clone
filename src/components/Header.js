@@ -6,7 +6,7 @@ import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
 import SubscriptionsOutlinedIcon from "@mui/icons-material/SubscriptionsOutlined";
 import StoreOutlinedIcon from "@mui/icons-material/StoreOutlined";
 import VideogameAssetOutlinedIcon from "@mui/icons-material/VideogameAssetOutlined";
-import { Avatar, IconButton } from "@mui/material";
+import { Avatar, Badge, IconButton } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import ForumIcon from "@mui/icons-material/Forum";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
@@ -48,10 +48,14 @@ function Header() {
 					<AddIcon />
 				</IconButton>
 				<IconButton>
-					<ForumIcon />
+					<Badge badgeContent={10} color="error" max={9}>
+						<ForumIcon />
+					</Badge>
 				</IconButton>
 				<IconButton>
-					<NotificationsActiveIcon />
+					<Badge badgeContent={10} color="error" max={9}>
+						<NotificationsActiveIcon />{" "}
+					</Badge>
 				</IconButton>
 				<IconButton>
 					<ExpandMoreIcon />

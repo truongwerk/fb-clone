@@ -1,0 +1,22 @@
+.login {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.login__logo > img {
+	object-fit: contain;
+	height: 150px;
+}
+
+.login >button{
+	width: 300px;
+	font-weight: 800;
+}
+
+.login__logo {
+	display: flex;
+	flex-direction: column;
+}
