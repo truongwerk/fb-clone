@@ -13,7 +13,7 @@ function Post({ profilePic, username, message, timestamp, image }) {
 				<Avatar src={profilePic} className="post__avatar" />
 				<div className="post__topInfo">
 					<h3>{username}</h3>
-					<p>{timestamp}</p>
+					<p>{new Date(timestamp * 1000).toLocaleString("en-GB")}</p>
 				</div>
 			</div>
 			<div className="post__bottom">

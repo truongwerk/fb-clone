@@ -27,10 +27,13 @@
 }
 
 .post__bottom {
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin: 5px 0;
 	padding: 15px 20px;
 }
+.post__bottom p{
+	font-size: large;
+}
+
 
 .post__image > img {
 	width: 100%;

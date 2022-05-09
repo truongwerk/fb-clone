@@ -1,13 +1,20 @@
 import { Button } from "@mui/material";
 import { auth, provider } from "../firebase";
+import { signInWithPopup } from "firebase/auth";
 import "../styles/Login.css";
+import { useStateValue } from "../StateProvider";
+import { actionTypes } from "../reducer";
 
 function Login() {
-	const signIn = () => {
-		auth
-			.signInWithPopup(provider)
-			.then((result) => console.log(result))
-			.catch((error) => alert(error.message));
+	const [state, dispatch] = useStateValue();
+
+	const signIn = async () => {
+		try {
+			let result = await signInWithPopup(auth, provider);
+			dispatch({ type: actionTypes.SET_USER, user: result.user });
+		} catch (error) {
+			console.log(error);
+		}
 	};
 	return (
 		<div className="login">
@@ -19,7 +26,7 @@ function Login() {
 				/>
 			</div>
 			<Button type="submit" variant="contained" onClick={signIn}>
-				Login
+				Login with google
 			</Button>
 		</div>
 	);
