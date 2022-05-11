@@ -5,4 +5,12 @@
 
 .app__body {
 	display: flex;
+	justify-content: space-between;
+	padding-top: 50px;
+}
+
+@media screen and (max-width: 1200px) {
+	.app__body {
+		justify-content: space-around;
+	}
 }

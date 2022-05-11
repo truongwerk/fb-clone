@@ -5,6 +5,8 @@ import VideocamIcon from "@mui/icons-material/Videocam";
 import PhotoLibraryIcon from "@mui/icons-material/PhotoLibrary";
 import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
 import { useStateValue } from "../StateProvider";
+import db from "../firebase";
+import { collection, addDoc } from "firebase/firestore";
 
 function CreatePost() {
 	const [input, setInput] = useState("");
@@ -13,10 +15,28 @@ function CreatePost() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		//data stuff
+		if (input !== "" || imageURL !== "") {
+			addPost();
+		}
 		setInput("");
 		setImageURL("");
 	};
+
+	async function addPost() {
+		try {
+			await addDoc(collection(db, "posts"), {
+				username: user.displayName,
+				profilePic: user.photoURL,
+				message: input,
+				image: imageURL,
+				likes: [],
+				comments: [],
+				timestamp: Date.now(),
+			});
+		} catch (error) {
+			console.error("Error writing new post to Firebase Database", error);
+		}
+	}
 
 	return (
 		<div className="createPost">

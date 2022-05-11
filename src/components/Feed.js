@@ -5,59 +5,61 @@ import Post from "./Post";
 import db from "../firebase";
 import { useEffect, useState } from "react";
 import {
-	getFirestore,
 	collection,
-	addDoc,
 	query,
 	orderBy,
 	limit,
 	onSnapshot,
-	setDoc,
-	updateDoc,
-	doc,
-	serverTimestamp,
 } from "firebase/firestore";
+import { Button } from "@mui/material";
 
 function Feed() {
 	const [posts, setPosts] = useState([]);
+	const [postLimit, setPostLimit] = useState(1);
 
 	useEffect(() => {
 		const recentMessagesQuery = query(
 			collection(db, "posts"),
 			orderBy("timestamp", "desc"),
-			limit(12)
+			limit(postLimit)
 		);
 		onSnapshot(recentMessagesQuery, (snapshot) => {
 			setPosts(
 				snapshot.docs.map((post) => ({
+					...post.data(),
 					id: post.id,
-					data: post.data(),
 				}))
 			);
 		});
-	}, []);
+	}, [postLimit]);
 
 	return (
 		<div className="feed">
 			<StoryReel />
 			<CreatePost />
-			<Post
-				profilePic="https://waste4change.com/blog/wp-content/uploads/niko-photos-tGTVxeOr_Rs-unsplash-1024x683.jpg"
-				username="Quang Truong"
-				message="I love nature"
-				timestamp="1652063422"
-				image="https://ielts-thanhloan.com/wp-content/uploads/2021/01/trees.jpg"
-			/>
 			{posts.map((post) => (
 				<Post
 					key={post.id}
-					profilePic={post.data.profilePic}
-					username={post.data.username}
-					message={post.data.message}
-					timestamp={post.data.timestamp.seconds}
-					image={post.data.image}
+					postID={post.id}
+					profilePic={post.profilePic}
+					username={post.username}
+					message={post.message}
+					timestamp={post.timestamp}
+					image={post.image}
+					likes={post.likes}
+					comments={post.comments}
 				/>
 			))}
+			<Button
+				variant="outlined"
+				fullWidth
+				style={{ marginTop: "20px" }}
+				onClick={() => {
+					setPostLimit((pre) => pre + 1);
+				}}
+			>
+				LOAD MORE POSTS
+			</Button>
 		</div>
 	);
 }
