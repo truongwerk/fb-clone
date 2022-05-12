@@ -15,7 +15,7 @@ import { Button } from "@mui/material";
 
 function Feed() {
 	const [posts, setPosts] = useState([]);
-	const [postLimit, setPostLimit] = useState(1);
+	const [postLimit, setPostLimit] = useState(2);
 
 	useEffect(() => {
 		const recentMessagesQuery = query(
@@ -55,7 +55,7 @@ function Feed() {
 				fullWidth
 				style={{ marginTop: "20px" }}
 				onClick={() => {
-					setPostLimit((pre) => pre + 1);
+					setPostLimit((pre) => pre + 2);
 				}}
 			>
 				LOAD MORE POSTS

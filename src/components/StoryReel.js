@@ -1,6 +1,7 @@
 import Story from "./Story";
 import "../styles/StoryReel.css";
 
+
 function StoryReel() {
 	return (
 		<div className="storyReel">

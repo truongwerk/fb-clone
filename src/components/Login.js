@@ -2,16 +2,15 @@ import { Button } from "@mui/material";
 import { auth, provider } from "../firebase";
 import { signInWithPopup } from "firebase/auth";
 import "../styles/Login.css";
-import { useStateValue } from "../StateProvider";
-import { actionTypes } from "../reducer";
+import useUser from "../GlobalState";
 
 function Login() {
-	const [state, dispatch] = useStateValue();
+	const userLogin = useUser((state) => state.userLogin);
 
 	const signIn = async () => {
 		try {
 			let result = await signInWithPopup(auth, provider);
-			dispatch({ type: actionTypes.SET_USER, user: result.user });
+			userLogin(result.user);
 		} catch (error) {
 			console.log(error);
 		}

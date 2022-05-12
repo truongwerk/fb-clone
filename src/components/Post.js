@@ -8,8 +8,8 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SendIcon from "@mui/icons-material/Send";
 import { updateDoc, doc, arrayUnion, arrayRemove } from "firebase/firestore";
 import db from "../firebase";
-import { useStateValue } from "../StateProvider";
 import { useEffect, useState } from "react";
+import useUser from "../GlobalState";
 
 function Post({
 	profilePic,
@@ -21,7 +21,7 @@ function Post({
 	likes,
 	comments,
 }) {
-	const [{ user }, dispatch] = useStateValue();
+	const user = useUser((state) => state.user);
 	const [isLiked, setIsLiked] = useState("");
 	const [comment, setComment] = useState("");
 	const postRef = doc(db, "posts", postID);

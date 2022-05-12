@@ -6,11 +6,10 @@ import StoreIcon from "@mui/icons-material/Store";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useStateValue } from "../StateProvider";
+import useUser from "../GlobalState";
 
 function Sidebar() {
-	const [{ user }, dispatch] = useStateValue();
-
+	const user = useUser((state) => state.user);
 	return (
 		<div className="sidebar">
 			<SidebarRow src={user.photoURL} title={user.displayName} />

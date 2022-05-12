@@ -11,10 +11,10 @@ import AddIcon from "@mui/icons-material/Add";
 import ForumIcon from "@mui/icons-material/Forum";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useStateValue } from "../StateProvider";
+import useUser from "../GlobalState";
 
 function Header() {
-	const [{ user }, dispatch] = useStateValue();
+	const user = useUser((state) => state.user);
 	return (
 		<div className="header">
 			<div className="header__left">

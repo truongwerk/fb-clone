@@ -4,14 +4,14 @@ import "../styles/CreatePost.css";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import PhotoLibraryIcon from "@mui/icons-material/PhotoLibrary";
 import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
-import { useStateValue } from "../StateProvider";
 import db from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
+import useUser from "../GlobalState";
 
 function CreatePost() {
+	const user = useUser((state) => state.user);
 	const [input, setInput] = useState("");
 	const [imageURL, setImageURL] = useState("");
-	const [{ user }, dispatch] = useStateValue();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
