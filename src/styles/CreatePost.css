@@ -59,3 +59,30 @@
 	background-color: #eff2f5;
 	border-radius: 20px;
 }
+
+@media screen and (max-width: 1000px) {
+	.createPost{
+		width: 525px;
+	}
+	.createPost__top > form > input{
+		width: 150px;
+		padding: 5px 10px;
+	}
+}
+
+@media screen and (max-width: 530px) {
+	.createPost{
+		width: 95vw;
+	}
+	.createPost__option{
+		padding: 10px;
+		margin: 0;
+	}
+	.createPost__top > form{
+		flex-wrap: wrap;
+	}
+	.createPost__top > form > input{
+		margin: 5px;
+	}
+}
+

@@ -106,3 +106,37 @@
 	padding: 10px 20px;
 	border-radius: 999px;
 }
+
+@media screen and (max-width: 1000px) {
+	.post{
+		width: 525px;
+	}	
+}
+@media screen and (max-width: 530px) {
+	.post{
+		width: 92vw;
+	}	
+	.post__option{
+		font-size: 16px;
+	}
+	.post__addComment > form{
+		padding-left: 10px;
+	}
+	.post__addComment > form > input{
+		font-size: 14px;
+		width: 200px;
+	}
+	.post__options{
+		padding: 10px;
+	}
+}
+
+@media screen and (max-width: 360px){
+	.post__addComment > form > input{
+		font-size: 12px;
+		width: 150px;
+	}
+	.post__option{
+		font-size: 13px;
+	}
+}

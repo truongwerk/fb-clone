@@ -66,11 +66,11 @@ function CreatePost() {
 				</div>
 				<div className="createPost__option">
 					<PhotoLibraryIcon style={{ color: "green" }} fontSize="large" />
-					<h3>Photo/Video</h3>
+					<h3>Photo/ Video</h3>
 				</div>
 				<div className="createPost__option">
 					<InsertEmoticonIcon style={{ color: "orange" }} fontSize="large" />
-					<h3>Feeling/Activity</h3>
+					<h3>Feeling/ Activity</h3>
 				</div>
 			</div>
 		</div>
