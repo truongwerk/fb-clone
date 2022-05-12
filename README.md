@@ -24,9 +24,8 @@
 - Firebase.
 - Mui.
 - Css.
-- Zustand
+- Zustand.
 - Webpack.
-- Api from https://docs.fortniteapi.com/ .
 
 ## Run Locally
 
