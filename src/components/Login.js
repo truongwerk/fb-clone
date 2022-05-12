@@ -1,8 +1,10 @@
-import { Button } from "@mui/material";
 import { auth, provider } from "../firebase";
 import { signInWithPopup } from "firebase/auth";
-import "../styles/Login.css";
 import useUser from "../GlobalState";
+
+//Style
+import "../styles/Login.css";
+import { Button } from "@mui/material";
 
 function Login() {
 	const userLogin = useUser((state) => state.userLogin);

@@ -1,15 +1,17 @@
-import { Avatar, IconButton } from "@mui/material";
+import { updateDoc, doc, arrayUnion, arrayRemove } from "firebase/firestore";
+import db from "../firebase";
+import { useEffect, useState } from "react";
+import useUser from "../GlobalState";
+
+//Style
 import "../styles/Post.css";
+import { Avatar, IconButton } from "@mui/material";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import NearMeIcon from "@mui/icons-material/NearMe";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SendIcon from "@mui/icons-material/Send";
-import { updateDoc, doc, arrayUnion, arrayRemove } from "firebase/firestore";
-import db from "../firebase";
-import { useEffect, useState } from "react";
-import useUser from "../GlobalState";
 
 function Post({
 	profilePic,

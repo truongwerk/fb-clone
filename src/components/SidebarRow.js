@@ -1,5 +1,5 @@
-import { Avatar } from "@mui/material";
 import "../styles/SidebarRow.css";
+import { Avatar } from "@mui/material";
 
 function SidebarRow({ src, Icon, title }) {
 	return (

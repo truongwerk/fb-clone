@@ -1,3 +1,6 @@
+import useUser from "../GlobalState";
+
+//Style
 import "../styles/Sidebar.css";
 import SidebarRow from "./SidebarRow";
 import PeopleIcon from "@mui/icons-material/People";
@@ -6,7 +9,6 @@ import StoreIcon from "@mui/icons-material/Store";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import useUser from "../GlobalState";
 
 function Sidebar() {
 	const user = useUser((state) => state.user);

@@ -79,6 +79,7 @@
 	background-color: #f0f2f5;
 	border-radius: 900px;
 	padding-left: 20px;
+	overflow: hidden;
 }
 
 .post__addComment > form > input {

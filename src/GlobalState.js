@@ -1,13 +1,8 @@
 import create from "zustand";
 
-// const useStore = create((set) => ({
-// 	bears: 0,
-// 	increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
-// 	removeAllBears: () => set({ bears: 0 }),
-// 	addBear: (value) => set((state) => ({ bears: state.bears + value })),
-// }));
-
-// export default useStore;
+// Create global state
+//user: value,
+//userLogin:change value method
 
 const useUser = create((set) => ({
 	user: null,

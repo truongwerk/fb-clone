@@ -1,4 +1,3 @@
-import "../styles/Feed.css";
 import StoryReel from "./StoryReel";
 import CreatePost from "./CreatePost";
 import Post from "./Post";
@@ -11,6 +10,9 @@ import {
 	limit,
 	onSnapshot,
 } from "firebase/firestore";
+
+//Style
+import "../styles/Feed.css";
 import { Button } from "@mui/material";
 
 function Feed() {

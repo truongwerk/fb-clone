@@ -1,12 +1,14 @@
 import { useState } from "react";
+import db from "../firebase";
+import { collection, addDoc } from "firebase/firestore";
+import useUser from "../GlobalState";
+
+//Style
 import { Avatar } from "@mui/material";
 import "../styles/CreatePost.css";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import PhotoLibraryIcon from "@mui/icons-material/PhotoLibrary";
 import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
-import db from "../firebase";
-import { collection, addDoc } from "firebase/firestore";
-import useUser from "../GlobalState";
 
 function CreatePost() {
 	const user = useUser((state) => state.user);

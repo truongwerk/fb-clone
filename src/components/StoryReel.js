@@ -31,8 +31,9 @@ const storyArray = [
 ];
 
 function StoryReel() {
-	const [story, setStory] = useState(storyArray);
+	const [story, setStory] = useState([]);
 
+	//Render amount of story based on width
 	const resize = () => {
 		if (window.innerWidth < 420) {
 			setStory([storyArray[0], storyArray[1], storyArray[2]]);

@@ -1,6 +1,6 @@
 {
   "short_name": "Facebook",
-  "name": "Facebook clone.",
+  "name": "Facebook clone, can post, like, unlike and comment .",
   "icons": [
     {
       "src": "favicon.ico",
