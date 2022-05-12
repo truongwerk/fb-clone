@@ -25,6 +25,7 @@
 - Mui.
 - Css.
 - Zustand.
+- Facebook page plugin: https://developers.facebook.com/docs/plugins/page-plugin/ .
 - Webpack.
 
 ## Run Locally
